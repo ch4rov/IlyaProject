@@ -11,4 +11,4 @@ public class AA_Main {
     public static void outputInfo(Info info) {
         info.showInfo();
     }
-} // test
+}
