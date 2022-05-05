@@ -1,27 +1,26 @@
 package Main;
 import java.lang.*;
-import java.math.*;
 
 public class Kyc8cQqm {
     public static void main(String [] args) {
         int count = 0;
-        HumanTest h1 = new HumanTest("Dad", "LastName", 20, ++count);
+        HumanTest h1 = new HumanTest("Dad", "Dad", 20, ++count);
         h1.showInfoHuman();
-        HumanTest h2 = new HumanTest("Bob", "LastName", 30, ++count);
+        HumanTest h2 = new HumanTest("Bob", "Bob", 30, ++count);
         h2.showInfoHuman();
-        HumanTest h3 = new HumanTest("Con", "LastName", 40, ++count);
+        HumanTest h3 = new HumanTest("Con", "Con", 40, ++count);
         h3.showInfoHuman();
         // change last name everyone, age 1,3
-        h1.setLastName("LastNameNewOne");
-        h2.setLastName("LastNameNewTwo");
-        h3.setLastName("LastNameNewThree");
+        h1.setLastName("DadL");
+        h2.setLastName("BobL");
+        h3.setLastName("ConL");
         h1.setAge(25);
         h3.setAge(47);
-        System.out.println("EDIT");
+        System.out.println();
         h1.showNewInfoHuman();
         h2.showNewInfoHuman();
         h3.showNewInfoHuman();
-        System.out.println("!!!!!!!!!");
+        System.out.println();
         h1.editAge(2);
         h1.showNewInfoHuman();
         // edit age from metods
@@ -33,6 +32,8 @@ class HumanTest {
     private int age;
     private String lastName;
     private int numberOfHuman;
+
+    final String City = "London";
 
     public HumanTest (String name, String lastName, int age, int countOfPeople) {
         this.name = name;
@@ -66,10 +67,16 @@ class HumanTest {
     }
 
     public void showNewInfoHuman(){
-        System.out.println("First name is "+name+", Last name is: "+lastName+", age "+age+".");
+        System.out.println("First name is "+name+", Last name is: "+lastName+", age "+age+". Years do pensii "+calculateYearsDoPensii()+". From " + City);
     }
 
     public void editAge(int plusAge){
         age = age + plusAge;
     }
+
+    int calculateYearsDoPensii(){
+        int years = 65-age;
+        return years;
+    }
 }
+
