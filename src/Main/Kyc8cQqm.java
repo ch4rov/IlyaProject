@@ -1,4 +1,6 @@
 package Main;
+import Interfaces.Info;
+
 import java.lang.*;
 
 public class Kyc8cQqm {
@@ -23,7 +25,7 @@ public class Kyc8cQqm {
         System.out.println();
         h1.editAge(2);
         h1.showNewInfoHuman();
-        // edit age from metods
+        // edit age from metods;
     }
 }
 
