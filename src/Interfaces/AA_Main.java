@@ -2,19 +2,13 @@ package Interfaces;
 
 public class AA_Main {
     public static void main(String[] args) {
-        Animal AnimalOne = new Animal(1);
-        Person PersonOne = new Person("Alex");
-        AnimalOne.showInfo();
-        PersonOne.showInfo();
+        Animal A1 = new Animal(1);
+        Person P1 = new Person("Alex");
+        outputInfo(A1);
+        outputInfo(P1);
+    }
 
-
-        /* ====== */
-        System.out.println();
-        // Interface "Info"
-        Info infoOne = new Animal(2);
-        Info infoTwo = new Person("Bob");
-        infoOne.showInfo();
-        infoTwo.showInfo();
-
+    public static void outputInfo(Info info) {
+        info.showInfo();
     }
 }
