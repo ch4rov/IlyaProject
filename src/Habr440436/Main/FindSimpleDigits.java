@@ -7,7 +7,6 @@ public class FindSimpleDigits {
         int max = 100;
         for (int i = 2; i <= max; i++) {
 
-            }
         }
     }
 }
