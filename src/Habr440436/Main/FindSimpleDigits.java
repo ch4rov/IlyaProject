@@ -6,7 +6,7 @@ public class FindSimpleDigits {
     public static void main(String[] args) {
         int max = 100;
         for (int i = 2; i <= max; i++) {
-
+// -
         }
     }
 }
