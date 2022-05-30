@@ -10,20 +10,17 @@ public class MaxMinMaxWithMenu {
         showMenu();
         Scanner chooseInMenu = new Scanner(System.in);
         byte menuChoose = 0;
-        try {
-            menuChoose = chooseInMenu.nextByte();
-        }
-        catch (InputMismatchException e) {
-            menuChoose = 9;
-
-        }
-
+        try { menuChoose = chooseInMenu.nextByte(); } catch (Exception e) {
+            System.out.println(e);
+            menuChoose = 9; }
         switch (menuChoose) {
             case 1:
                 for (int i = 0; i <= 2; i++) {
                     System.out.print("Entry " + (i + 1) + " value: ");
                     Scanner digit = new Scanner(System.in);
-                    massive[i] = digit.nextDouble();
+                    try { massive[i] = digit.nextDouble(); } catch (Exception e) {
+                        massive[i] = 0;
+                        System.out.println("\u001B[31m" + "You entry wrong digit. Value " + (i+1) + " = 0" + "\u001B[0m");}
                 }
                 break;
             case 2:
