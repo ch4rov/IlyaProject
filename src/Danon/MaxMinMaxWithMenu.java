@@ -1,30 +1,39 @@
 package Danon;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MaxMinMaxWithMenu {
     public static void main(String[] args) {
-        int[] massive = new int[3];
+        double[] massive = new double[3];
         boolean exit = true;
         while (exit) {
         showMenu();
         Scanner chooseInMenu = new Scanner(System.in);
-        byte menuChoose = chooseInMenu.nextByte();
+        byte menuChoose = 0;
+        try {
+            menuChoose = chooseInMenu.nextByte();
+        }
+        catch (InputMismatchException e) {
+            menuChoose = 9;
+
+        }
+
         switch (menuChoose) {
             case 1:
                 for (int i = 0; i <= 2; i++) {
                     System.out.print("Entry " + (i + 1) + " value: ");
                     Scanner digit = new Scanner(System.in);
-                    massive[i] = digit.nextInt();
+                    massive[i] = digit.nextDouble();
                 }
                 break;
             case 2:
-                System.out.println(getMax(massive));
+                System.out.println("Maximum is " + getMax(massive));
                 break;
             case 3:
-                System.out.println(getMin(massive));
+                System.out.println("Minimum is " + getMin(massive));
                 break;
             case 4:
-                System.out.println(getAvg(massive));
+                System.out.println("Average is " + getAvg(massive));
                 break;
             case 0:
                 System.out.println("\u001B[30m" + "Exit from program." + "\u001B[0m");
@@ -35,7 +44,7 @@ public class MaxMinMaxWithMenu {
         }}
     }
 
-    public static void showMenu(){
+    private static void showMenu(){
         System.out.println();
         System.out.println("===USER MENU===");
         System.out.println("1 = Enter digits");
@@ -46,24 +55,24 @@ public class MaxMinMaxWithMenu {
         System.out.print("Entry digit to continue: ");
     }
 
-    private static int getMax(int[] massive){
-        int max = massive[0];
+    private static double getMax(double[] massive){
+        double max = massive[0];
         for (int i = 1; i < massive.length; i++){
             if (massive[i] > max) {
                 max = massive[i];
             }
         } return max;
     }
-    public static int getMin(int[] massive){
-        int min = massive[0];
+    private static double getMin(double[] massive){
+        double min = massive[0];
         for (int i = 1; i < massive.length; i++){
             if (massive[i] < min) {
                 min = massive[i];
             }
         } return min;
     }
-    public static int getAvg(int[] massive){
-        int sum = 0;
+    private static double getAvg(double[] massive){
+        double sum = 0;
         for (int i = 0; i <= (massive.length-1); i++){
             sum = sum + massive[i];
         } return (sum / massive.length);
