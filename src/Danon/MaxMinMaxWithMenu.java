@@ -75,4 +75,3 @@ public class MaxMinMaxWithMenu {
         } return (sum / massive.length);
     }
 }
-
