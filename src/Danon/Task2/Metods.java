@@ -1,4 +1,4 @@
-package Danon;
+package Danon.Task2;
 import java.util.Scanner;
 
 public class Metods extends Students {
@@ -15,9 +15,9 @@ public class Metods extends Students {
     public void showEditPersonMenu() {
         System.out.println();
         System.out.println("What you wanna edit?");
-        System.out.println("1 = First name (In developing);");
-        System.out.println("2 = Second name (In developing);");
-        System.out.println("0 = Back to menu;");
+        System.out.println("1 = First name");
+        System.out.println("2 = Second name");
+        System.out.println("0 = Back to menu");
         System.out.print("Entry digit to continue: ");
  }
 

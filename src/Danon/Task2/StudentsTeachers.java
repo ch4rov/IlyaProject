@@ -1,4 +1,4 @@
-package Danon;
+package Danon.Task2;
 import java.util.Scanner;
 
 public class StudentsTeachers extends Metods {
@@ -29,12 +29,8 @@ public class StudentsTeachers extends Metods {
                                 menuEditChoose = 99;
                             }
                             switch (menuEditChoose) {
-                                /*
                                  case 1 -> editFirstNameOfPerson();
                                  case 2 -> editSecondNameOfPerson();
-                                */
-                                case 1 -> System.out.println("Now not working.");
-                                case 2 -> System.out.println("Now not working.");
                                 case 0 -> {
                                     System.out.println("\u001B[30m" + "Exit to menu." + "\u001B[0m");
                                     exitFromEditMenu = false;

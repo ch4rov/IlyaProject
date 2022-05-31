@@ -1,4 +1,4 @@
-package Danon;
+package Danon.Task1;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -11,7 +11,6 @@ public class MaxMinMaxWithMenu {
         Scanner chooseInMenu = new Scanner(System.in);
         byte menuChoose = 0;
         try { menuChoose = chooseInMenu.nextByte(); } catch (Exception e) {
-            System.out.println(e);
             menuChoose = 9; }
         switch (menuChoose) {
             case 1:
