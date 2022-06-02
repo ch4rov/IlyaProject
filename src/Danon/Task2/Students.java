@@ -1,11 +1,12 @@
 package Danon.Task2;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Students {
     private String firstName;
     private String secondName;
-    private long UUID;
+    private int UUID;
 
     public String getFirstName() {
         return firstName;
@@ -27,9 +28,9 @@ public class Students {
         return UUID;
     }
 
-    public void setUUID(long UUID) {
+    public void setUUID(int UUID) {
         this.UUID = UUID;
     }
 
-    ArrayList<String> list = new ArrayList<>() {};
+    HashMap<Integer, String> MapList = new HashMap<>();
 }
